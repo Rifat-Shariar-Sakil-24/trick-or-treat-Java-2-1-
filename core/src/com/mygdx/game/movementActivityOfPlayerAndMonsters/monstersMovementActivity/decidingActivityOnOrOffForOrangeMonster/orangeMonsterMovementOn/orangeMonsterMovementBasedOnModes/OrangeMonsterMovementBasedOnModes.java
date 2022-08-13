@@ -1,0 +1,22 @@
+package com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivity.decidingActivityOnOrOffForOrangeMonster.orangeMonsterMovementOn.orangeMonsterMovementBasedOnModes;
+
+import com.mygdx.game.TheLastLife;
+import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivity.decidingActivityOnOrOffForCyanMonster.cyanMonsterMovementOn.cyanMonsterMovementBasedOnModes.cyanMonsterChaseMode.CyanMonsterChaseMode;
+import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivity.decidingActivityOnOrOffForCyanMonster.cyanMonsterMovementOn.cyanMonsterMovementBasedOnModes.cyanMonsterEaterMode.CyanMonsterEatenMode;
+import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivity.decidingActivityOnOrOffForCyanMonster.cyanMonsterMovementOn.cyanMonsterMovementBasedOnModes.cyanMonsterFrightenedMode.CyanMonsterFrightenedMode;
+import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivity.decidingActivityOnOrOffForCyanMonster.cyanMonsterMovementOn.cyanMonsterMovementBasedOnModes.cyanMonsterScatterMode.CyanMonsterScatterMode;
+import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivity.decidingActivityOnOrOffForOrangeMonster.orangeMonsterMovementOn.orangeMonsterMovementBasedOnModes.orangeMonsterChaseMode.OrangeMonsterChaseMode;
+import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivity.decidingActivityOnOrOffForOrangeMonster.orangeMonsterMovementOn.orangeMonsterMovementBasedOnModes.orangeMonsterEatenMode.OrangeMonsterEatenMode;
+import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivity.decidingActivityOnOrOffForOrangeMonster.orangeMonsterMovementOn.orangeMonsterMovementBasedOnModes.orangeMonsterFrightenedMode.OrangeMonsterFrightenedMode;
+import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivity.decidingActivityOnOrOffForOrangeMonster.orangeMonsterMovementOn.orangeMonsterMovementBasedOnModes.orangeMonsterScatterMode.OrangeMonsterScatterMode;
+
+public class OrangeMonsterMovementBasedOnModes extends TheLastLife {
+    public OrangeMonsterMovementBasedOnModes()
+    {
+        if(orangeGhostChaseModeOn){ OrangeMonsterChaseMode orangeMonsterChaseMode = new OrangeMonsterChaseMode();}
+        else if(orangeGhostScatterModeOn) {
+            OrangeMonsterScatterMode orangeMonsterScatterMode = new OrangeMonsterScatterMode();}
+        else if(orangeGhostFrightenedModeOn) { OrangeMonsterFrightenedMode orangeMonsterFrightenedMode = new OrangeMonsterFrightenedMode();}
+        else if(orangeGhostEatenMode) { OrangeMonsterEatenMode orangeMonsterEatenMode = new OrangeMonsterEatenMode();}
+    }
+}
