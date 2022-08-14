@@ -60,7 +60,7 @@ public class GamePlayScreen extends TheLastLife {
         spriteBig.rotate(-2);
 
         batch.begin();
-        batch.draw(sideImg,1044,0);
+       // batch.draw(sideImg,1044,0);
         batch.end();
 
         batch.begin();

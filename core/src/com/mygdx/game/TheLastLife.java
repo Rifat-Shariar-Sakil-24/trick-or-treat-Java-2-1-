@@ -1,9 +1,6 @@
 package com.mygdx.game;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
@@ -48,7 +45,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 	public static float arcXMax = 1044-72,arcXMin = 72, arcYMax = 960-60, arcYMin = arcYMin = 60;
 	public static float arcRadius = 10;
-	public static float arcMove = 3;
+	public static float arcMoveInitial=3;
+	public static float arcMove = arcMoveInitial;
 
 	public static char arcDirection ='0';
 
@@ -84,7 +82,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 	public static float redGhostRadius = 10;
-	public static float redGhostMove= 2;
+	public static float redGhostMove= arcMove;
 	public static boolean redGhostMovementOn = false;
 	public static boolean redRight=false,redLeft=false,redUp=false,redDown=false;
 
@@ -123,7 +121,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 	public static float pinkGhostRadius = 10;
-	public static float pinkGhostMove= 2;
+	public static float pinkGhostMove= arcMove;
 	public static boolean pinkGhostMovementOn = false;
 	public static boolean pinkRight=false,pinkLeft=false,pinkUp=false,pinkDown=false;
 
@@ -162,7 +160,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 	public static float cyanGhostRadius = 10;
-	public static float cyanGhostMove= 2;
+	public static float cyanGhostMove= arcMove;
 	public static boolean cyanGhostMovementOn = false;
 	public static boolean cyanRight=false,cyanLeft=false,cyanUp=false,cyanDown=false;
 
@@ -298,7 +296,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 	public static float orangeGhostRadius = 10;
-	public static float orangeGhostMove= 2;
+	public static float orangeGhostMove= arcMove;
 	public static boolean orangeGhostMovementOn = false;
 	public static boolean orangeRight=false,orangeLeft=false,orangeUp=false,orangeDown=false;
 
@@ -339,7 +337,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 	//starting screen
 	public static SpriteBatch startingScreenBatch,menu,yourScore;
-	public static Texture startingScreenImg,menuImg,sideImg,yourScoreImg,allCoinsEaten;
+	public static Texture startingScreenImg,menuImg,menuImg2,sideImg,yourScoreImg,allCoinsEaten;
 	public static float timeElapsed=0f;
 
 
@@ -357,6 +355,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 	public static long numberOfCoins = 246;
 
+	public static long menuStart = 1;
+
 
 
 	@Override
@@ -365,7 +365,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 		batch = new SpriteBatch();
-		img = new Texture("mugdha4.png");
+		img = new Texture("fullScreen1.jpg");
 
 		batchRed = new SpriteBatch();
 		redMonsterRight = new Texture("red/redRight.png");
@@ -451,8 +451,9 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
        // staring screen
 		startingScreenBatch = new SpriteBatch();
-		startingScreenImg = new Texture("startScreen2.jpg");
-		menuImg = new Texture("menu.png");
+		startingScreenImg = new Texture("startScreenMain2.jpg");
+		menuImg = new Texture("menu2.jpg");
+		menuImg2 = new Texture("menu3.jpg");
 		sideImg = new Texture("side3.png");
 		yourScoreImg = new Texture("lifeended.png");
 		allCoinsEaten = new Texture("allCoinsEaten.png");
@@ -466,16 +467,18 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 	@Override
 	public void render () {
+
 		Gdx.input.setInputProcessor((InputProcessor) this);
         startingScreenBatch.begin();
 		startingScreenBatch.draw(startingScreenImg,0,0);
 		startingScreenBatch.end();
 		timeElapsed += Gdx.graphics.getDeltaTime();
 
-		if(amiOn==2 && musicOn==1) music.play();
-		else if(amiOn ==2 && musicOn==0) music.pause();
+		//if(amiOn==2 && musicOn==1)
+			music.play();
+		//else if(amiOn ==2 && musicOn==0) music.pause();
 
-		if(timeElapsed>=1f) {
+		if(timeElapsed>=3f) {
 
 			if(amiOn==0)amiOn = 1;
 			if(amiOn==1) {HomeMenu homeMenu = new HomeMenu();}
@@ -493,6 +496,13 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 			//GamePlayScreen gamePlayScreen = new GamePlayScreen();
 		}
+
+
+
+
+
+			//marioY -= Gdx.graphics.getDeltaTime() * marioSpeed;
+		//System.out.println(menuStart);
 	}
 
 
@@ -511,20 +521,30 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 	@Override
 	public boolean keyDown(int keycode) {
+		if(menuStart == 0) menuStart=1;
+		else menuStart = 0;
 		return false;
 	}
 
 	@Override
 	public boolean keyUp(int keycode) {
+
 		return false;
 	}
 
 	@Override
 	public boolean keyTyped(char character) {
+		//System.out.println("hello");
 		if(amiOn==1)
 		{
-			if(character == 'e') { System.exit(0); }
-			if(character == 'p') {amiOn = 2;}
+			//if(character == 'e') { System.exit(0); }
+			//if(character == 'p') {amiOn = 2;}
+			if(character=='\n')
+			{
+				if(menuStart==0) {amiOn=2;}
+				else System.exit(0);
+			}
+
 		}
 		else if(amiOn==2) {
 			if (playerMovementOn) {
