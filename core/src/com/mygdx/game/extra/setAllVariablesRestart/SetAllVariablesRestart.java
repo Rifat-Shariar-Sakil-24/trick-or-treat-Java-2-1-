@@ -200,7 +200,7 @@ public class SetAllVariablesRestart extends TheLastLife {
             totalLife=3;
             score = 0;
             amiOn = 2;
-            timeElapsed = 1f;
+            timeElapsed = 3f;
             musicOn = 1;
 
 

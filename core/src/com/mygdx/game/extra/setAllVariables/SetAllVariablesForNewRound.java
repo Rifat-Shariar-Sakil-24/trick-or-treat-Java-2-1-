@@ -199,10 +199,10 @@ public class SetAllVariablesForNewRound extends TheLastLife {
         totalLife--;
         if(totalLife==0){
             totalLife=3;
-            score = 0;
+            //score = 0;
             amiOn = 3;
             musicOn = 0;
-            timeElapsed = 1f;
+            timeElapsed = 3f;
 
 
 

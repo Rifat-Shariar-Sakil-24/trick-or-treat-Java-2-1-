@@ -389,13 +389,21 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 
+	public static long scoreDigitSizeZeroLife = 55;
+	public static long scoreDigitSpaceZeroLife = 0;
+	public  static long scoreDigitYZeroLifeY = 960-570-(scoreDigitSize);
+	public static long scoreDigitXForOneZeroLife = 700-(scoreDigitSize/2);
+	public static long scoreDigitXForTwoZeroLife = 700-( ( (2*scoreDigitSize) + (1*scoreDigitSpace)   ) /2 );
+	public static long scoreDigitXForThreeZeroLife = 700-( ( (3*scoreDigitSize) + (2*scoreDigitSpace)   ) /2 );
+	public static long scoreDigitXForFourZeroLife = 700-( ( (4*scoreDigitSize) + (3*scoreDigitSpace)   ) /2 );
+
 	@Override
 	public void create () {
 
 
 
 		batch = new SpriteBatch();
-		img = new Texture("fullScreen1.jpg");
+		img = new Texture("fullScreen2.jpg");
 
 		batchRed = new SpriteBatch();
 		redMonsterRight = new Texture("red/redRight.png");
@@ -481,11 +489,11 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
        // staring screen
 		startingScreenBatch = new SpriteBatch();
-		startingScreenImg = new Texture("startScreenMain2.jpg");
+		startingScreenImg = new Texture("startScreenMain4.jpg");
 		menuImg = new Texture("menu2.jpg");
 		menuImg2 = new Texture("menu3.jpg");
 		sideImg = new Texture("side3.png");
-		yourScoreImg = new Texture("lifeended.png");
+		yourScoreImg = new Texture("lifeended.jpg");
 		allCoinsEaten = new Texture("allCoinsEaten.png");
 
 		menu = new SpriteBatch();
@@ -627,6 +635,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 			if(character == 'r'){
 				amiOn = 2;
 				musicOn = 1;
+				score = 0;
 				SetAllVariablesRestart setAllVariablesRestart = new SetAllVariablesRestart();
 			}
 			else if(character == 'e')System.exit(0);

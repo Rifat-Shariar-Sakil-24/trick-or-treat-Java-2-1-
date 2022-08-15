@@ -23,6 +23,7 @@ public class Score extends TheLastLife {
             digitStartX += scoreDigitSpace;
             digitStartX += scoreDigitSize;
 
+
         }
     }
 }
