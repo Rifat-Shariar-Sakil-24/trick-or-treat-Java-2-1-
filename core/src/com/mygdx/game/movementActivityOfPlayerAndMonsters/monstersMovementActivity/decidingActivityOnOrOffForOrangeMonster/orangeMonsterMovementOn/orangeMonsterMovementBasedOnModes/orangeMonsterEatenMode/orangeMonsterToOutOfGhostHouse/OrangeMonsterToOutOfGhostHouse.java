@@ -14,16 +14,34 @@ public class OrangeMonsterToOutOfGhostHouse extends TheLastLife {
 
         OrangeDrawEaten orangeDrawEaten = new OrangeDrawEaten();
 
-        if (orangeGhostMovementOn == false) {
-            orangeGhostX += orangeGhostMove;
-            orangeGhostMovementOn = true;
-            orangeRight = true;
+        if (orangeGhostMovementOn == false  && (orangeGhostX % cellWidth!=0 && orangeGhostY % cellHeight!=0)) {
+
+
+            if(orangeUp) orangeGhostY += orangeGhostMove;
+            else if(orangeDown) orangeGhostY -= orangeGhostMove;
+
+
+
+            else if(orangeRight) {
+                if(orangeGhostX >= 1044+orangeGhostRadius){
+                    orangeGhostX = -orangeGhostRadius;
+                }
+                orangeGhostX += orangeGhostMove;
+
+            }
+            else if(orangeLeft) {
+                if(orangeGhostX<=-orangeGhostRadius){
+                    orangeGhostX = 1044+orangeGhostRadius;
+                }
+                orangeGhostX-=orangeGhostMove;
+            }
         }
         else
         {
 
             if (orangeGhostX % cellWidth == 0 && orangeGhostY % cellHeight == 0)
             {
+                orangeGhostMovementOn = true;
                 if(orangeGhostSpeedIncreasedAfterEaten==false){
                     orangeGhostSpeedIncreasedAfterEaten = true;
                     orangeGhostMove = increasedPinkGhostSpeedAtEatenMode;
@@ -34,11 +52,11 @@ public class OrangeMonsterToOutOfGhostHouse extends TheLastLife {
             {
                 if(orangeGhostX>=1044+orangeGhostRadius)
                 {
-                    orangeGhostX = -orangeGhostRadius+orangeGhostMove;
+                    orangeGhostX = -(2*orangeGhostMove);
                 }
                 else if(orangeGhostX<=-orangeGhostRadius)
                 {
-                    orangeGhostX = 1044+orangeGhostRadius-orangeGhostMove;
+                    orangeGhostX = 1044+(2*orangeGhostMove);
                 }
                 else if(orangeRight) orangeGhostX+=orangeGhostMove;
                 else if(orangeLeft) orangeGhostX-=orangeGhostMove;

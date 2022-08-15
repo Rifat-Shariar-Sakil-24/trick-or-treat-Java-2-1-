@@ -15,28 +15,47 @@ public class CyanMonsterToOutOfGhostHouse extends TheLastLife {
 
         CyanDrawEaten cyanDrawEaten = new CyanDrawEaten();
 
-        if (cyanGhostMovementOn == false) {
-            cyanGhostX += cyanGhostMove;
-            cyanGhostMovementOn = true;
-            cyanRight = true;
+        if (cyanGhostMovementOn == false  && (cyanGhostX % cellWidth!=0 && cyanGhostY % cellHeight!=0)) {
+
+
+            if(cyanUp) cyanGhostY += cyanGhostMove;
+           else if(cyanDown) cyanGhostY -= cyanGhostMove;
+
+
+
+            else if(cyanRight) {
+                if(cyanGhostX >= 1044+cyanGhostRadius){
+                    cyanGhostX = -cyanGhostRadius;
+                }
+                cyanGhostX += cyanGhostMove;
+
+            }
+            else if(cyanLeft) {
+                if(cyanGhostX<=-cyanGhostRadius){
+                    cyanGhostX = 1044+cyanGhostRadius;
+                }
+                cyanGhostX-=cyanGhostMove;
+            }
         }
         else
         {
 
             if (cyanGhostX % cellWidth == 0 && cyanGhostY % cellHeight == 0)
             {
+                cyanGhostMovementOn = true;
                 if(cyanGhostSpeedIncreasedAfterEaten==false){
                     cyanGhostSpeedIncreasedAfterEaten = true;
                     cyanGhostMove = increasedPinkGhostSpeedAtEatenMode;
                 }
                 cyanAlgorithm();
             }
+
             else
             {
                 if (cyanGhostX >= 1044 + cyanGhostRadius) {
-                    cyanGhostX = -cyanGhostRadius + cyanGhostMove;
+                    cyanGhostX = -(2*cyanGhostMove);
                 } else if (cyanGhostX <= -cyanGhostRadius) {
-                    cyanGhostX = 1044 + cyanGhostRadius - cyanGhostMove;
+                    cyanGhostX = 1044 + (2*cyanGhostMove);
                 } else if (cyanRight) cyanGhostX += cyanGhostMove;
                 else if (cyanLeft) cyanGhostX -= cyanGhostMove;
                 else if (cyanUp) cyanGhostY += cyanGhostMove;

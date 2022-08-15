@@ -15,11 +15,34 @@ public class PinkMonsterToOutOfGhostHouse extends TheLastLife {
         PinkDrawEaten pinkDrawEaten = new PinkDrawEaten();
 
 
-        if(pinkGhostMovementOn==false) {pinkGhostX += pinkGhostMove;pinkGhostMovementOn=true;pinkRight=true;}
+
+        if (pinkGhostMovementOn == false  && (pinkGhostX % cellWidth!=0 && pinkGhostY % cellHeight!=0)) {
+
+
+            if(pinkUp) pinkGhostY += pinkGhostMove;
+            else if(pinkDown)  pinkGhostY -= pinkGhostMove;
+
+
+
+            else if(pinkRight) {
+                if(pinkGhostX >= 1044+pinkGhostRadius){
+                    pinkGhostX = -pinkGhostRadius;
+                }
+                pinkGhostX += pinkGhostMove;
+
+            }
+            else if(pinkLeft) {
+                if(pinkGhostX<=-pinkGhostRadius){
+                    pinkGhostX = 1044+pinkGhostRadius;
+                }
+                pinkGhostX-=pinkGhostMove;
+            }
+        }
         else{
 
             if(pinkGhostX%cellWidth==0 && pinkGhostY%cellHeight==0)
             {
+                pinkGhostMovementOn = true;
                 if(pinkGhostSpeedIncreasedAfterEaten==false){
                     pinkGhostSpeedIncreasedAfterEaten = true;
                     pinkGhostMove = increasedPinkGhostSpeedAtEatenMode;
@@ -30,11 +53,11 @@ public class PinkMonsterToOutOfGhostHouse extends TheLastLife {
             {
                 if(pinkGhostX>=1044+pinkGhostRadius)
                 {
-                    pinkGhostX = -pinkGhostRadius+pinkGhostMove;
+                    pinkGhostX = (2*pinkGhostMove);
                 }
                 else if(pinkGhostX<=-pinkGhostRadius)
                 {
-                    pinkGhostX = 1044+pinkGhostRadius-pinkGhostMove;
+                    pinkGhostX = 1044+(2*pinkGhostMove);
                 }
                 else if(pinkRight) pinkGhostX+=pinkGhostMove;
                 else if(pinkLeft) pinkGhostX-=pinkGhostMove;
