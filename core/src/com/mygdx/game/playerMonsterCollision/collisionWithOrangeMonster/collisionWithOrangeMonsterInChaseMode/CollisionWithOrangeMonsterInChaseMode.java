@@ -8,8 +8,8 @@ public class CollisionWithOrangeMonsterInChaseMode extends TheLastLife {
     {
         boolean collided = false;
 
-        if(Math.abs(orangeGhostX-arcX)<=2  && orangeGhostY==arcY) collided = true;
-        if(Math.abs(orangeGhostY-arcY)<=2 && orangeGhostX==arcX) collided = true;
+        if(Math.abs(orangeGhostX-arcX)<=20  && orangeGhostY==arcY) collided = true;
+        if(Math.abs(orangeGhostY-arcY)<=25 && orangeGhostX==arcX) collided = true;
 
         if(collided)
         {

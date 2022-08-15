@@ -28,6 +28,17 @@ public class YourScore extends TheLastLife {
             digitStartX += scoreDigitSpaceZeroLife;
             digitStartX += scoreDigitSizeZeroLife;
 
+        }
+        int drawStartX= (int) exitRestartOnGameScreenImageXZeroLife;
+
+        for(int i=0;i<2;i++)
+        {
+            int ind = i;
+            batch.begin();
+            batch.draw(exitRestartOnGameScreenImage[ind],drawStartX,exitRestartOnGameScreenImageYZeroLife);
+            batch.end();
+            drawStartX += exitRestartOnGameScreenImageSpaceZeroLife;
+            drawStartX += exitRestartOnGameScreenImageSizeZeroLife;
 
         }
 

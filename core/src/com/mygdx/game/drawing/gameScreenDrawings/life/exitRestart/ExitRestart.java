@@ -13,7 +13,7 @@ public class ExitRestart extends TheLastLife {
             batch.begin();
             batch.draw(exitRestartOnGameScreenImage[ind],drawStartX,exitRestartOnGameScreenImageY);
             batch.end();
-            drawStartX += getExitRestartOnGameScreenImageSpace;
+            drawStartX += exitRestartOnGameScreenImageSpace;
             drawStartX += exitRestartOnGameScreenImageSize;
 
         }

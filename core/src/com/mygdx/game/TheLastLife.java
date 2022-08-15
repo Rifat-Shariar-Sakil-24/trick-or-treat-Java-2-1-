@@ -25,7 +25,7 @@ import javax.swing.plaf.TextUI;
 import java.awt.*;
 import java.util.Set;
 
-public class TheLastLife extends ApplicationAdapter implements InputProcessor {
+public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 
 	public static float timeState=0f;
@@ -44,7 +44,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 	public static float arcXMax = 1044-72,arcXMin = 72, arcYMax = 960-60, arcYMin = arcYMin = 60;
-	public static float arcRadius = 10;
+	public static float arcRadius = 9;
 	public static float arcMoveInitial=3;
 	public static float arcMove = arcMoveInitial;
 
@@ -81,7 +81,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 
-	public static float redGhostRadius = 10;
+	public static float redGhostRadius = 9;
 	public static float redGhostMove= arcMove;
 	public static boolean redGhostMovementOn = false;
 	public static boolean redRight=false,redLeft=false,redUp=false,redDown=false;
@@ -120,7 +120,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 
-	public static float pinkGhostRadius = 10;
+	public static float pinkGhostRadius = 9;
 	public static float pinkGhostMove= arcMove;
 	public static boolean pinkGhostMovementOn = false;
 	public static boolean pinkRight=false,pinkLeft=false,pinkUp=false,pinkDown=false;
@@ -159,7 +159,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 
-	public static float cyanGhostRadius = 10;
+	public static float cyanGhostRadius = 9;
 	public static float cyanGhostMove= arcMove;
 	public static boolean cyanGhostMovementOn = false;
 	public static boolean cyanRight=false,cyanLeft=false,cyanUp=false,cyanDown=false;
@@ -180,11 +180,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 	public static boolean cyanGhostReachedOutOfGhostHouseEatenMode = false;
 	public static boolean cyanGhostReachedCenterOfGhostHouseEatenMode = false;
 
-
-
-
 	//29-4-2022
-
 	//red
 
 	public static SpriteBatch batchRed;
@@ -295,7 +291,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 
-	public static float orangeGhostRadius = 10;
+	public static float orangeGhostRadius = 9;
 	public static float orangeGhostMove= arcMove;
 	public static boolean orangeGhostMovementOn = false;
 	public static boolean orangeRight=false,orangeLeft=false,orangeUp=false,orangeDown=false;
@@ -324,8 +320,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 	public static Texture playerMonsterRight,playerMonsterLeft;
 	public static boolean isPlayerRightPng = true;
 	public static boolean isPlayerLeftPng = false;
-	public static float playerWidthPng = 28;
-	public static float playerHeightPng = 37;
+	public static float playerWidthPng = 40;
+	public static float playerHeightPng = 35;
 
 
 
@@ -351,7 +347,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 	public  static long totalLife = 3;
 
-	public static long musicOn = 1;
+	public static long musicOn = 0;
 
 	public static long numberOfCoins = 246;
 
@@ -383,8 +379,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 	public static Texture[] exitRestartOnGameScreenImage = new Texture[2];
 	public static long exitRestartOnGameScreenImageSize = 64;
-	public static long getExitRestartOnGameScreenImageSpace = 30;
-	public  static long  exitRestartOnGameScreenImageX =  1220-( ( (2*exitRestartOnGameScreenImageSize) + (getExitRestartOnGameScreenImageSpace)   ) /2 );
+	public static long exitRestartOnGameScreenImageSpace = 30;
+	public  static long  exitRestartOnGameScreenImageX =  1220-( ( (2*exitRestartOnGameScreenImageSize) + (exitRestartOnGameScreenImageSpace)   ) /2 );
 	public static long exitRestartOnGameScreenImageY = 960-820-(exitRestartOnGameScreenImageSize/2);
 
 
@@ -396,6 +392,36 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 	public static long scoreDigitXForTwoZeroLife = 700-( ( (2*scoreDigitSize) + (1*scoreDigitSpace)   ) /2 );
 	public static long scoreDigitXForThreeZeroLife = 700-( ( (3*scoreDigitSize) + (2*scoreDigitSpace)   ) /2 );
 	public static long scoreDigitXForFourZeroLife = 700-( ( (4*scoreDigitSize) + (3*scoreDigitSpace)   ) /2 );
+
+
+
+	public static Texture[] exitRestartOnGameScreenImageZeroLife = new Texture[2];
+	public static long exitRestartOnGameScreenImageSizeZeroLife = 64;
+	public static long exitRestartOnGameScreenImageSpaceZeroLife = 30;
+	public  static long  exitRestartOnGameScreenImageXZeroLife =  700-( ( (2*exitRestartOnGameScreenImageSizeZeroLife) + (exitRestartOnGameScreenImageSpaceZeroLife)   ) /2 );
+	public static long exitRestartOnGameScreenImageYZeroLife = 960-690-(exitRestartOnGameScreenImageSizeZeroLife/2);
+
+
+
+
+	public static long scoreDigitSizeCoinsEaten = 55;
+	public static long scoreDigitSpaceCoinsEaten = 0;
+	public  static long scoreDigitYCoinsEatenY = 960-570-(scoreDigitSize);
+	public static long scoreDigitXForOneCoinsEaten= 700-(scoreDigitSize/2);
+	public static long scoreDigitXForTwoCoinsEaten = 700-( ( (2*scoreDigitSize) + (1*scoreDigitSpace)   ) /2 );
+	public static long scoreDigitXForThreeCoinsEaten = 700-( ( (3*scoreDigitSize) + (2*scoreDigitSpace)   ) /2 );
+	public static long scoreDigitXForFourCoinsEaten = 700-( ( (4*scoreDigitSize) + (3*scoreDigitSpace)   ) /2 );
+
+
+	public static Texture[] exitRestartOnGameScreenImageCoinsEaten = new Texture[2];
+	public static long exitRestartOnGameScreenImageSizeCoinsEaten = 64;
+	public static long exitRestartOnGameScreenImageSpaceCoinsEaten = 30;
+	public  static long  exitRestartOnGameScreenImageXCoinsEaten =  700-( ( (2*exitRestartOnGameScreenImageSizeCoinsEaten) + (exitRestartOnGameScreenImageSpaceCoinsEaten)   ) /2 );
+	public static long exitRestartOnGameScreenImageYCoinsEaten = 960-690-(exitRestartOnGameScreenImageSizeCoinsEaten/2);
+
+
+
+
 
 	@Override
 	public void create () {
@@ -461,8 +487,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 
 		batchPlayer = new SpriteBatch();
-		playerMonsterRight = new Texture("player/playerRight.png");
-		playerMonsterLeft = new Texture("player/playerLeft.png");
+		playerMonsterRight = new Texture("player/playerRight4.png");
+		playerMonsterLeft = new Texture("player/playerLeft4.png");
 
 
        music = Gdx.audio.newMusic(Gdx.files.internal("music/music.ogg"));
@@ -489,12 +515,12 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
        // staring screen
 		startingScreenBatch = new SpriteBatch();
-		startingScreenImg = new Texture("startScreenMain4.jpg");
+		startingScreenImg = new Texture("startScreenMain7.jpg");
 		menuImg = new Texture("menu2.jpg");
 		menuImg2 = new Texture("menu3.jpg");
-		sideImg = new Texture("side3.png");
+		sideImg = new Texture("bar.png");
 		yourScoreImg = new Texture("lifeended.jpg");
-		allCoinsEaten = new Texture("allCoinsEaten.png");
+		allCoinsEaten = new Texture("allCoinsEaten.jpg");
 
 		menu = new SpriteBatch();
 		font = new BitmapFont();
@@ -541,11 +567,11 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 		timeElapsed += Gdx.graphics.getDeltaTime();
 
 		//if(amiOn==2 && musicOn==1)
-			music.play();
+		//	music.play();
 		//else if(amiOn ==2 && musicOn==0) music.pause();
 
 		if(timeElapsed>=3f) {
-
+           // if(numberOfCoins==240) amiOn = 4;
 			if(amiOn==0)amiOn = 1;
 			if(amiOn==1) {HomeMenu homeMenu = new HomeMenu();}
 			if(amiOn==2) {GamePlayScreen gamePlayScreen = new GamePlayScreen();
@@ -628,7 +654,6 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 				if(musicOn ==1) musicOn = 0;
 				else musicOn = 1;
 			}
-		//	if()
 		}
 		else if(amiOn==3)
 		{
@@ -644,6 +669,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 		else if(amiOn==4){
 			if(character=='r'){
 				amiOn = 2;
+				score  = 0;
 				musicOn = 1;
 				SetAllVariablesRestart setAllVariablesRestart = new SetAllVariablesRestart();
 

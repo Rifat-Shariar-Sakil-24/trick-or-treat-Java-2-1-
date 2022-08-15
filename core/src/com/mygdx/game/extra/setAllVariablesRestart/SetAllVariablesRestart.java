@@ -25,7 +25,7 @@ public class SetAllVariablesRestart extends TheLastLife {
 
 
         arcXMax = 1044-72;arcXMin = 72;arcYMax = 960-60;arcYMin = 60;
-        arcRadius = 10;
+        arcRadius = 9;
         arcMove = arcMoveInitial;
 
         arcDirection ='0';
@@ -58,7 +58,7 @@ public class SetAllVariablesRestart extends TheLastLife {
 
 
 
-        redGhostRadius = 10;
+        redGhostRadius = 9;
         redGhostMove= arcMove;
         redGhostMovementOn = false;
         redRight=false;redLeft=false;redUp=false;redDown=false;
@@ -174,7 +174,7 @@ public class SetAllVariablesRestart extends TheLastLife {
 
 
 
-        orangeGhostRadius = 10;
+        orangeGhostRadius = 9;
         orangeGhostMove= arcMove;
         orangeGhostMovementOn = false;
         orangeRight=false;orangeLeft=false;orangeUp=false;orangeDown=false;

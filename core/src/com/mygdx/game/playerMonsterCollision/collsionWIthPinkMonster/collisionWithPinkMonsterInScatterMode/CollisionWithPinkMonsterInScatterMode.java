@@ -8,8 +8,8 @@ public class CollisionWithPinkMonsterInScatterMode extends TheLastLife {
     {
         boolean collided = false;
 
-        if(Math.abs(pinkGhostX-arcX)<=2  && pinkGhostY==arcY) collided = true;
-        if(Math.abs(pinkGhostY-arcY)<=2 && pinkGhostX==arcX) collided = true;
+        if(Math.abs(pinkGhostX-arcX)<=20  && pinkGhostY==arcY) collided = true;
+        if(Math.abs(pinkGhostY-arcY)<=25 && pinkGhostX==arcX) collided = true;
 
         if(collided)
         {

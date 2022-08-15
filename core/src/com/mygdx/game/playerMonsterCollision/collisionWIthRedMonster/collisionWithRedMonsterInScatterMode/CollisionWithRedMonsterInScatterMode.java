@@ -8,8 +8,8 @@ public class CollisionWithRedMonsterInScatterMode extends TheLastLife {
     {
         boolean collided = false;
 
-        if(Math.abs(redGhostX-arcX)<=2  && redGhostY==arcY) collided = true;
-        if(Math.abs(redGhostY-arcY)<=2 && redGhostX==arcX) collided = true;
+        if(Math.abs(redGhostX-arcX)<=20  && redGhostY==arcY) collided = true;
+        if(Math.abs(redGhostY-arcY)<=25 && redGhostX==arcX) collided = true;
 
         if(collided)
         {

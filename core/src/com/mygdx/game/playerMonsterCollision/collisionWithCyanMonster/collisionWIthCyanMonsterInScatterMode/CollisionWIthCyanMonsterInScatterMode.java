@@ -8,8 +8,8 @@ public class CollisionWIthCyanMonsterInScatterMode extends TheLastLife {
     {
         boolean collided = false;
 
-        if(Math.abs(cyanGhostX-arcX)<=2  && cyanGhostY==arcY) collided = true;
-        if(Math.abs(cyanGhostY-arcY)<=2 && cyanGhostX==arcX) collided = true;
+        if(Math.abs(cyanGhostX-arcX)<=20  && cyanGhostY==arcY) collided = true;
+        if(Math.abs(cyanGhostY-arcY)<=25 && cyanGhostX==arcX) collided = true;
 
         if(collided)
         {

@@ -62,7 +62,7 @@ public class GamePlayScreen extends TheLastLife {
         spriteBig.rotate(-2);
 
         batch.begin();
-       // batch.draw(sideImg,1044,0);
+        batch.draw(sideImg,1040,0);
         batch.end();
 
         Score score1 = new Score();
@@ -78,6 +78,8 @@ public class GamePlayScreen extends TheLastLife {
         font.draw(batch,Long.toString(score),1150,850);
         batch.end();
         */
+
+
 
     }
 }
