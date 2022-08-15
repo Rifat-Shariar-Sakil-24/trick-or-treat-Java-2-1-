@@ -374,6 +374,11 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 	public static long lifeXForTwo = 1220-( ( (2*lifeSize) + (1*lifeSpace)   ) /2 );
 	public static long lifeXForThree = 1220-( ( (3*lifeSize) + (2*lifeSpace)   ) /2 );
 
+	public static Texture[] musicOnOffImage = new Texture[2];
+	public static long musicOnOffImageSize = 64;
+	public  static long musicOnOffImageX = 1220-(musicOnOffImageSize/2);
+	public static long musicOnOffImageY = 960-690-(musicOnOffImageSize/2);
+
 
 	@Override
 	public void create () {
@@ -497,6 +502,9 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 		life[1] = new Texture("life/life.png");
 		life[2] = new Texture("life/life.png");
 
+		musicOnOffImage[0] = new Texture("music/musicOn.png");
+		musicOnOffImage[1] = new Texture("music/musicOff.png");
+
 
 
 
@@ -595,6 +603,10 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 			else if(character == 'e') System.exit(0);
 			else if(character == 'r'){
 				SetAllVariablesRestart setAllVariablesRestart = new SetAllVariablesRestart();
+			}
+			else if(character == 'o'){
+				if(musicOn ==1) musicOn = 0;
+				else musicOn = 1;
 			}
 		//	if()
 		}
