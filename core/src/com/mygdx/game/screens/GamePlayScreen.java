@@ -5,6 +5,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.mygdx.game.TheLastLife;
 import com.mygdx.game.coins.drawCoins.drawingCoinsOnMaze;
+import com.mygdx.game.drawing.life.Life;
+import com.mygdx.game.drawing.score.Score;
 import com.mygdx.game.monsterModes.decidingModesForAllMonsters.DecidingModesForAllMonsters;
 import com.mygdx.game.movementActivityOfPlayerAndMonsters.MovementActivityOfPlayerAndMonsters;
 import com.mygdx.game.playerMonsterCollision.PlayerMonsterCollision;
@@ -63,14 +65,17 @@ public class GamePlayScreen extends TheLastLife {
        // batch.draw(sideImg,1044,0);
         batch.end();
 
-        batch.begin();
+        Score score1 = new Score();
+        Life life1 = new Life();
+
+        /*batch.begin();
         font.draw(batch,"SCORE",1150,900);
         batch.end();
 
         batch.begin();
         font.draw(batch,Long.toString(score),1150,850);
         batch.end();
-
+        */
 
     }
 }

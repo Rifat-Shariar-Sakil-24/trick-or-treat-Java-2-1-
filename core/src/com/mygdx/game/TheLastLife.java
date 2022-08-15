@@ -356,7 +356,23 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 	public static long numberOfCoins = 246;
 
 	public static long menuStart = 1;
+	public static Texture[] scoreDigit = new Texture[10];
 
+	public static long scoreDigitSize = 55;
+	public static long scoreDigitSpace = 0;
+	public  static long scoreDigitY = 620-(scoreDigitSize/2);
+	public static long scoreDigitXForOne = 1220-(scoreDigitSize/2);
+	public static long scoreDigitXForTwo = 1220-( ( (2*scoreDigitSize) + (1*scoreDigitSpace)   ) /2 );
+	public static long scoreDigitXForThree = 1220-( ( (3*scoreDigitSize) + (2*scoreDigitSpace)   ) /2 );
+	public static long scoreDigitXForFour = 1220-( ( (4*scoreDigitSize) + (3*scoreDigitSpace)   ) /2 );
+
+    public static Texture[] life = new Texture[3];
+	public static long lifeSize = 55;
+	public static long lifeSpace = 0;
+	public  static long lifeY = 440-(lifeSize/2);
+	public static long lifeXForOne = 1220-(lifeSize/2);
+	public static long lifeXForTwo = 1220-( ( (2*lifeSize) + (1*lifeSpace)   ) /2 );
+	public static long lifeXForThree = 1220-( ( (3*lifeSize) + (2*lifeSpace)   ) /2 );
 
 
 	@Override
@@ -462,6 +478,28 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 		font = new BitmapFont();
 		font.setColor(Color.RED);
 		font.getData().setScale(2,2);
+
+
+
+		scoreDigit[0]= new Texture("ScoreDigit/zero.png");
+		scoreDigit[1]= new Texture("ScoreDigit/one.png");
+		scoreDigit[2]= new Texture("ScoreDigit/two.png");
+		scoreDigit[3]= new Texture("ScoreDigit/three.png");
+		scoreDigit[4]= new Texture("ScoreDigit/four.png");
+		scoreDigit[5]= new Texture("ScoreDigit/five.png");
+		scoreDigit[6]= new Texture("ScoreDigit/six.png");
+		scoreDigit[7]= new Texture("ScoreDigit/seven.png");
+		scoreDigit[8]= new Texture("ScoreDigit/eight.png");
+		scoreDigit[9]= new Texture("ScoreDigit/nine.png");
+
+
+		life[0] = new Texture("life/life.png");
+		life[1] = new Texture("life/life.png");
+		life[2] = new Texture("life/life.png");
+
+
+
+
 
 	}
 
