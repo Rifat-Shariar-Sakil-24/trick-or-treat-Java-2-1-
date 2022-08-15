@@ -1,4 +1,4 @@
-package com.mygdx.game.drawing.score;
+package com.mygdx.game.drawing.gameScreenDrawings.life.score;
 
 import com.mygdx.game.TheLastLife;
 

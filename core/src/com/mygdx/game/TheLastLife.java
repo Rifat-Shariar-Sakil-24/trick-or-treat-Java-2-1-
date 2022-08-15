@@ -380,6 +380,15 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 	public static long musicOnOffImageY = 960-690-(musicOnOffImageSize/2);
 
 
+
+	public static Texture[] exitRestartOnGameScreenImage = new Texture[2];
+	public static long exitRestartOnGameScreenImageSize = 64;
+	public static long getExitRestartOnGameScreenImageSpace = 30;
+	public  static long  exitRestartOnGameScreenImageX =  1220-( ( (2*exitRestartOnGameScreenImageSize) + (getExitRestartOnGameScreenImageSpace)   ) /2 );
+	public static long exitRestartOnGameScreenImageY = 960-820-(exitRestartOnGameScreenImageSize/2);
+
+
+
 	@Override
 	public void create () {
 
@@ -504,6 +513,9 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor {
 
 		musicOnOffImage[0] = new Texture("music/musicOn.png");
 		musicOnOffImage[1] = new Texture("music/musicOff.png");
+
+		exitRestartOnGameScreenImage[0] = new Texture("exit.png");
+		exitRestartOnGameScreenImage[1] = new Texture("restart.png");
 
 
 

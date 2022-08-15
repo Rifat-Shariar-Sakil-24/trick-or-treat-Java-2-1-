@@ -1,13 +1,12 @@
 package com.mygdx.game.screens;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.mygdx.game.TheLastLife;
 import com.mygdx.game.coins.drawCoins.drawingCoinsOnMaze;
-import com.mygdx.game.drawing.life.Life;
-import com.mygdx.game.drawing.musicOnOff.MusicOnOff;
-import com.mygdx.game.drawing.score.Score;
+import com.mygdx.game.drawing.gameScreenDrawings.life.exitRestart.ExitRestart;
+import com.mygdx.game.drawing.gameScreenDrawings.life.life.Life;
+import com.mygdx.game.drawing.gameScreenDrawings.life.musicOnOff.MusicOnOff;
+import com.mygdx.game.drawing.gameScreenDrawings.life.score.Score;
 import com.mygdx.game.monsterModes.decidingModesForAllMonsters.DecidingModesForAllMonsters;
 import com.mygdx.game.movementActivityOfPlayerAndMonsters.MovementActivityOfPlayerAndMonsters;
 import com.mygdx.game.playerMonsterCollision.PlayerMonsterCollision;
@@ -69,6 +68,7 @@ public class GamePlayScreen extends TheLastLife {
         Score score1 = new Score();
         Life life1 = new Life();
         MusicOnOff musicOnOff = new MusicOnOff();
+        ExitRestart exitRestart = new ExitRestart();
 
         /*batch.begin();
         font.draw(batch,"SCORE",1150,900);

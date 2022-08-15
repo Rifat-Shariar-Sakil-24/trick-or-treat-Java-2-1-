@@ -1,4 +1,4 @@
-package com.mygdx.game.drawing.musicOnOff;
+package com.mygdx.game.drawing.gameScreenDrawings.life.musicOnOff;
 
 import com.mygdx.game.TheLastLife;
 
