@@ -10,7 +10,7 @@ public class DirectionChangeOfCyanMonster extends TheLastLife {
         {
             cyanLeft = true;
             cyanRight = false;
-            cyanGhostX -= cyanGhostMove;
+            //cyanGhostX -= cyanGhostMove;
             isCyanRightPngFri = false;
             isCyanLeftPngFri = true;
             isCyanRightPng = false;
@@ -19,30 +19,42 @@ public class DirectionChangeOfCyanMonster extends TheLastLife {
             isCyanLeftPngEaten = true;
 
 
+            cyanDown = false;
+            cyanUp = false;
+
+
         }
         else if(cyanLeft)
         {
             cyanLeft = false;
             cyanRight = true;
-            cyanGhostX += cyanGhostMove;
+          //  cyanGhostX += cyanGhostMove;
             isCyanRightPng = true;
             isCyanLeftPng = false;
             isCyanRightPngFri = true;
             isCyanLeftPngFri = false;
             isCyanRightPngEaten = true;
             isCyanLeftPngEaten = false;
+
+            cyanDown = false;
+            cyanUp = false;
         }
         else if(cyanUp)
         {
             cyanUp = false;
             cyanDown = true;
-            cyanGhostY -= cyanGhostMove;
+
+            cyanRight = false;
+            cyanLeft = false;
+            //cyanGhostY -= cyanGhostMove;
         }
         else
         {
             cyanDown = false;
             cyanUp = true;
-            cyanGhostY += cyanGhostMove;
+            cyanRight = false;
+            cyanLeft = false;
+           // cyanGhostY += cyanGhostMove;
         }
     }
 }

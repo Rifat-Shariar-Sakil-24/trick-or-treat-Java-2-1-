@@ -9,7 +9,7 @@ public class DirectionChangeOfOrangeMonster extends TheLastLife {
         {
             orangeLeft = true;
             orangeRight = false;
-            orangeGhostX -= orangeGhostMove;
+           // orangeGhostX -= orangeGhostMove;
             isOrangeRightPngFri = false;
             isOrangeLeftPngFri = true;
             isOrangeRightPng = false;
@@ -23,7 +23,7 @@ public class DirectionChangeOfOrangeMonster extends TheLastLife {
         {
             orangeLeft = false;
             orangeRight = true;
-            orangeGhostX += orangeGhostMove;
+            //orangeGhostX += orangeGhostMove;
             isOrangeRightPng = true;
             isOrangeLeftPng = false;
             isOrangeRightPngFri = true;
@@ -35,13 +35,13 @@ public class DirectionChangeOfOrangeMonster extends TheLastLife {
         {
             orangeUp = false;
             orangeDown = true;
-            orangeGhostY -= orangeGhostMove;
+       //     orangeGhostY -= orangeGhostMove;
         }
         else
         {
             orangeDown = false;
             orangeUp = true;
-            orangeGhostY += orangeGhostMove;
+         //   orangeGhostY += orangeGhostMove;
         }
     }
 }

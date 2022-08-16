@@ -19,12 +19,35 @@ public class RedMonsterEatenMode extends TheLastLife {
 
 
 
-        if(redGhostMovementOn==false) {redGhostX += redGhostMove;redGhostMovementOn=true;redRight=true;}
-        else{
+        if (redGhostMovementOn == false  && (redGhostX % cellWidth!=0 || redGhostY % cellHeight!=0)) {
+
+
+            if(redUp) redGhostY += redGhostMove;
+            else if(redDown) redGhostY -= redGhostMove;
+
+
+
+            else if(redRight) {
+                if(redGhostX >= 1044+redGhostRadius){
+                    redGhostX = -redGhostRadius;
+                }
+                redGhostX += redGhostMove;
+
+            }
+            else if(redLeft) {
+                if(redGhostX<=-redGhostRadius){
+                    redGhostX = 1044+redGhostRadius;
+                }
+                redGhostX-=redGhostMove;
+            }
+        }
+
+         else{
 
             if(redGhostX%cellWidth==0 && redGhostY%cellHeight==0)
             {
                 if(redGhostSpeedIncreasedAfterEaten==false){
+                    redGhostMovementOn = true;
                     redGhostSpeedIncreasedAfterEaten = true;
                     redGhostMove = increasedRedGhostSpeedAtEatenMode;
                 }
@@ -32,13 +55,13 @@ public class RedMonsterEatenMode extends TheLastLife {
             }
             else
             {
-                if(redGhostX>=1044+redGhostRadius)
+                if(redGhostX>=1044+redGhostRadius && redRight)
                 {
-                    redGhostX = -redGhostRadius+redGhostMove;
+                    redGhostX = -(2*redGhostMove);
                 }
-                else if(redGhostX<=-redGhostRadius)
+                else if(redGhostX<=-redGhostRadius && redLeft)
                 {
-                    redGhostX = 1044+redGhostRadius-redGhostMove;
+                    redGhostX = 1044+(2*redGhostMove);
                 }
                 else if(redRight) redGhostX+=redGhostMove;
                 else if(redLeft) redGhostX-=redGhostMove;

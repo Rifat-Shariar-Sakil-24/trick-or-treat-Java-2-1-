@@ -12,6 +12,7 @@ public class CollisionWIthCyanMonsterInFrightenedMode extends TheLastLife {
 
         if(collided)
         {
+            cyanGhostMovementOn = false;
             cyanGhostFrightenedModeOn = false;
             cyanGhostChaseModeOn = false;
             cyanGhostScatterModeOn = false;

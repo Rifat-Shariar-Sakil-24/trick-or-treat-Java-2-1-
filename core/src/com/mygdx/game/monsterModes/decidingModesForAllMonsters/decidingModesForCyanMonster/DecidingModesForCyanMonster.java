@@ -54,16 +54,29 @@ public class DecidingModesForCyanMonster extends TheLastLife {
     {
         if(cyanGhostX==cyanGhostXInitial && cyanGhostY==cyanGhostYInitial)
         {
+            System.out.print(isDirectionChangedOnEatenModeCyan);
             cyanGhostEatenMode = false;
             cyanGhostFrightenedModeOn = false;
             cyanGhostMove = pinkGhostMoveInitial;
             cyanGhostSpeedIncreasedAfterEaten = false;
             cyanGhostOutOfGhostHouse = false;
             cyanGhostCenterOfGhostHouse = false;
+
+
+            directionChangedOnFrightenedModeCyan = false;
+            isDirectionChangedOnEatenModeCyan = false;
+
+
+            cyanGhostReachedOutOfGhostHouseEatenMode = false;
+            cyanGhostReachedCenterOfGhostHouseEatenMode = false;
+
+          //  System.out.println("  " + isDirectionChangedOnEatenModeCyan);
+
         }
         else {
             if(isDirectionChangedOnEatenModeCyan == false)
             {
+                //System.out.println("ashche: "+ "right: " + cyanRight + "left: " + cyanLeft + "up: "+cyanUp+ "down: " + cyanDown);
                 isDirectionChangedOnEatenModeCyan = true;
                 DirectionChangeOfCyanMonster directionChangeOfCyanMonster = new DirectionChangeOfCyanMonster();
 

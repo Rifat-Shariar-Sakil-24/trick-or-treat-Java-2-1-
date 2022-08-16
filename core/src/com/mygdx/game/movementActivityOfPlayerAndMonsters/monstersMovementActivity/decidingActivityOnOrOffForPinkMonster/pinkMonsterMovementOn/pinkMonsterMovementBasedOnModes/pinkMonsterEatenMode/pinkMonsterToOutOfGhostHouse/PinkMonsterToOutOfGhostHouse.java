@@ -16,7 +16,7 @@ public class PinkMonsterToOutOfGhostHouse extends TheLastLife {
 
 
 
-        if (pinkGhostMovementOn == false  && (pinkGhostX % cellWidth!=0 && pinkGhostY % cellHeight!=0)) {
+        if (pinkGhostMovementOn == false  && (pinkGhostX % cellWidth!=0 || pinkGhostY % cellHeight!=0)) {
 
 
             if(pinkUp) pinkGhostY += pinkGhostMove;
@@ -51,11 +51,11 @@ public class PinkMonsterToOutOfGhostHouse extends TheLastLife {
             }
             else
             {
-                if(pinkGhostX>=1044+pinkGhostRadius)
+                if(pinkGhostX>=1044+pinkGhostRadius && pinkRight)
                 {
-                    pinkGhostX = (2*pinkGhostMove);
+                    pinkGhostX = -(2*pinkGhostMove);
                 }
-                else if(pinkGhostX<=-pinkGhostRadius)
+                else if(pinkGhostX<=-pinkGhostRadius && pinkLeft)
                 {
                     pinkGhostX = 1044+(2*pinkGhostMove);
                 }

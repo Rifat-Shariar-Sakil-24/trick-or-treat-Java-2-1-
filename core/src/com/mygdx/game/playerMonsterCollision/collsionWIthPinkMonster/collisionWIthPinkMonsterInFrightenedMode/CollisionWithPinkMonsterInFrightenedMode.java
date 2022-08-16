@@ -12,6 +12,7 @@ public class CollisionWithPinkMonsterInFrightenedMode extends TheLastLife {
 
         if(collided)
         {
+            pinkGhostMovementOn = false;
             pinkGhostFrightenedModeOn = false;
             pinkGhostChaseModeOn = false;
             pinkGhostScatterModeOn = false;

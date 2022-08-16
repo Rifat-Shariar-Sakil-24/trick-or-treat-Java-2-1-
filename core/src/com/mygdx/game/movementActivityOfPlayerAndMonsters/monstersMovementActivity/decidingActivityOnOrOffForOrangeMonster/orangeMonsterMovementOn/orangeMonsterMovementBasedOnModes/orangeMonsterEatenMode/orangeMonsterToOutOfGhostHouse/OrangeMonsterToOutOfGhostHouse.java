@@ -14,7 +14,7 @@ public class OrangeMonsterToOutOfGhostHouse extends TheLastLife {
 
         OrangeDrawEaten orangeDrawEaten = new OrangeDrawEaten();
 
-        if (orangeGhostMovementOn == false  && (orangeGhostX % cellWidth!=0 && orangeGhostY % cellHeight!=0)) {
+        if (orangeGhostMovementOn == false  && (orangeGhostX % cellWidth!=0 || orangeGhostY % cellHeight!=0)) {
 
 
             if(orangeUp) orangeGhostY += orangeGhostMove;
@@ -38,7 +38,7 @@ public class OrangeMonsterToOutOfGhostHouse extends TheLastLife {
         }
         else
         {
-
+             System.out.println("orange: ");
             if (orangeGhostX % cellWidth == 0 && orangeGhostY % cellHeight == 0)
             {
                 orangeGhostMovementOn = true;
@@ -50,11 +50,11 @@ public class OrangeMonsterToOutOfGhostHouse extends TheLastLife {
             }
             else
             {
-                if(orangeGhostX>=1044+orangeGhostRadius)
+                if(orangeGhostX>=1044+orangeGhostRadius && orangeRight)
                 {
                     orangeGhostX = -(2*orangeGhostMove);
                 }
-                else if(orangeGhostX<=-orangeGhostRadius)
+                else if(orangeGhostX<=-orangeGhostRadius && orangeLeft)
                 {
                     orangeGhostX = 1044+(2*orangeGhostMove);
                 }

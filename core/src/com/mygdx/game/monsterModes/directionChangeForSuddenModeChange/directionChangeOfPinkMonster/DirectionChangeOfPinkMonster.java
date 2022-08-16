@@ -5,11 +5,12 @@ import com.mygdx.game.TheLastLife;
 public class DirectionChangeOfPinkMonster extends TheLastLife {
     public DirectionChangeOfPinkMonster()
     {
+      //  System.out.println(pinkRight + " " + pinkLeft + " " + pinkUp + " " + pinkDown);
         if(pinkRight)
         {
             pinkLeft = true;
             pinkRight = false;
-            pinkGhostX -= pinkGhostMove;
+           // pinkGhostX -= pinkGhostMove;
             isPinkRightPng = false;
             isPinkLeftPng=true;
             isPinkRightPngFri = false;
@@ -21,7 +22,7 @@ public class DirectionChangeOfPinkMonster extends TheLastLife {
         {
             pinkLeft = false;
             pinkRight = true;
-            pinkGhostX += pinkGhostMove;
+            //pinkGhostX += pinkGhostMove;
             isPinkRightPng = true;
             isPinkLeftPng = false;
             isPinkRightPngFri = true;
@@ -33,13 +34,13 @@ public class DirectionChangeOfPinkMonster extends TheLastLife {
         {
             pinkUp = false;
             pinkDown = true;
-            pinkGhostY -= pinkGhostMove;
+            //pinkGhostY -= pinkGhostMove;
         }
         else
         {
             pinkDown = false;
             pinkUp = true;
-            pinkGhostY += pinkGhostMove;
+            //pinkGhostY += pinkGhostMove;
         }
     }
 }

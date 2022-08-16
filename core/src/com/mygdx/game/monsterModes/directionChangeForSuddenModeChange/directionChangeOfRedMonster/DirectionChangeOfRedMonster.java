@@ -9,7 +9,7 @@ public class DirectionChangeOfRedMonster extends TheLastLife {
         {
             redLeft = true;
             redRight = false;
-            redGhostX -= redGhostMove;
+           // redGhostX -= redGhostMove;
             isRedRightPng=false;
             isRedLeftPng=true;
             isRedRightPngFri = false;
@@ -23,7 +23,7 @@ public class DirectionChangeOfRedMonster extends TheLastLife {
         {
             redLeft = false;
             redRight = true;
-            redGhostX += redGhostMove;
+            //redGhostX += redGhostMove;
 
             isRedRightPng=true;
             isRedLeftPng = false;
@@ -36,13 +36,13 @@ public class DirectionChangeOfRedMonster extends TheLastLife {
         {
             redUp = false;
             redDown = true;
-            redGhostY -= redGhostMove;
+            //redGhostY -= redGhostMove;
         }
         else
         {
             redDown = false;
             redUp = true;
-            redGhostY += redGhostMove;
+            //redGhostY += redGhostMove;
         }
     }
 }

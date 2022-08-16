@@ -12,6 +12,7 @@ public class CollisionWithOrangeMonsterInFrightenedMode extends TheLastLife {
 
         if(collided)
         {
+            orangeGhostMovementOn = false;
             orangeGhostFrightenedModeOn = false;
             orangeGhostChaseModeOn = false;
             orangeGhostScatterModeOn = false;

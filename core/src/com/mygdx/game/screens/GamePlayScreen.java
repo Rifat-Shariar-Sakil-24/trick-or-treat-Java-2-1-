@@ -54,9 +54,11 @@ public class GamePlayScreen extends TheLastLife {
 
 
         drawingCoinsOnMaze drawingCoinsOnMaze = new drawingCoinsOnMaze();
-        MovementActivityOfPlayerAndMonsters movementActivityOfPlayerAndMonsters = new MovementActivityOfPlayerAndMonsters();
-        DecidingModesForAllMonsters decidingModesForAllMonsters = new DecidingModesForAllMonsters();
         PlayerMonsterCollision playerMonsterCollision = new PlayerMonsterCollision();
+        DecidingModesForAllMonsters decidingModesForAllMonsters = new DecidingModesForAllMonsters();
+
+        MovementActivityOfPlayerAndMonsters movementActivityOfPlayerAndMonsters = new MovementActivityOfPlayerAndMonsters();
+
 
         sprite.rotate(2);
         spriteBig.rotate(-2);

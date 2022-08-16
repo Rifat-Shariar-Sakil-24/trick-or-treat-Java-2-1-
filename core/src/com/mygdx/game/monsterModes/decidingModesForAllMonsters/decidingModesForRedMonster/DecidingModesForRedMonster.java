@@ -57,6 +57,9 @@ public class DecidingModesForRedMonster extends TheLastLife {
             redGhostFrightenedModeOn = false;
             redGhostMove = redGhostMoveInitial;
             redGhostSpeedIncreasedAfterEaten = false;
+
+            directionChangedOnFrightenedModeRed = false;
+            isDirectionChangedOnEatenModeRed = false;
         }
         else {
             if(isDirectionChangedOnEatenModeRed == false)

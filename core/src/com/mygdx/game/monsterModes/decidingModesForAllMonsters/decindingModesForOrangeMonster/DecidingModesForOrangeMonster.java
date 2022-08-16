@@ -60,6 +60,13 @@ public class DecidingModesForOrangeMonster extends TheLastLife {
             orangeGhostSpeedIncreasedAfterEaten = false;
             orangeGhostOutOfGhostHouse = false;
             orangeGhostCenterOfGhostHouse = false;
+
+
+            directionChangedOnFrightenedModeOrange = false;
+            isDirectionChangedOnEatenModeOrange = false;
+
+            orangeGhostReachedCenterOfGhostHouseEatenMode = false;
+            orangeGhostReachedOutOfGhostHouseEatenMode = false;
         }
         else {
             if(isDirectionChangedOnEatenModeOrange == false)

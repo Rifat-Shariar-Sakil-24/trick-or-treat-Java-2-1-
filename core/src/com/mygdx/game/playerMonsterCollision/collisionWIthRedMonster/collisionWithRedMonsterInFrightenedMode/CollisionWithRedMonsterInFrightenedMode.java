@@ -13,6 +13,7 @@ public class CollisionWithRedMonsterInFrightenedMode extends TheLastLife {
 
         if(collided)
         {
+            redGhostMovementOn = false;
             redGhostFrightenedModeOn = false;
             redGhostChaseModeOn = false;
             redGhostScatterModeOn = false;

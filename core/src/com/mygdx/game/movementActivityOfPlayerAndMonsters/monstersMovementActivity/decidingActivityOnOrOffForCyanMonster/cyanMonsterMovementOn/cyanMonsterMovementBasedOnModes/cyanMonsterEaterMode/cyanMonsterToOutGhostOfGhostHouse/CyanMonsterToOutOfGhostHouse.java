@@ -15,7 +15,7 @@ public class CyanMonsterToOutOfGhostHouse extends TheLastLife {
 
         CyanDrawEaten cyanDrawEaten = new CyanDrawEaten();
 
-        if (cyanGhostMovementOn == false  && (cyanGhostX % cellWidth!=0 && cyanGhostY % cellHeight!=0)) {
+        if (cyanGhostMovementOn == false  && (cyanGhostX % cellWidth!=0 || cyanGhostY % cellHeight!=0)) {
 
 
             if(cyanUp) cyanGhostY += cyanGhostMove;
@@ -52,9 +52,9 @@ public class CyanMonsterToOutOfGhostHouse extends TheLastLife {
 
             else
             {
-                if (cyanGhostX >= 1044 + cyanGhostRadius) {
+                if (cyanGhostX >= 1044 + cyanGhostRadius && cyanRight) {
                     cyanGhostX = -(2*cyanGhostMove);
-                } else if (cyanGhostX <= -cyanGhostRadius) {
+                } else if (cyanGhostX <= -cyanGhostRadius && cyanLeft) {
                     cyanGhostX = 1044 + (2*cyanGhostMove);
                 } else if (cyanRight) cyanGhostX += cyanGhostMove;
                 else if (cyanLeft) cyanGhostX -= cyanGhostMove;

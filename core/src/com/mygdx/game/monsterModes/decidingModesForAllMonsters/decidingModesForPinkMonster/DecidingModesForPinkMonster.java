@@ -58,6 +58,13 @@ public class DecidingModesForPinkMonster extends TheLastLife {
             pinkGhostMove = pinkGhostMoveInitial;
             pinkGhostSpeedIncreasedAfterEaten = false;
             pinkGhostOutOfGhostHouse = false;
+
+            directionChangedOnFrightenedModePink =false;
+            isDirectionChangedOnEatenModePink = false;
+
+            pinkGhostReachedOutOfGhostHouseEatenMode = false;
+
+           // System.out.println(isDirectionChangedOnEatenModePink);
         }
         else {
             if(isDirectionChangedOnEatenModePink == false)

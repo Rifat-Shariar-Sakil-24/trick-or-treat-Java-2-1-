@@ -187,8 +187,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 	public static Texture redMonsterRight,redMonsterLeft;
 	public static boolean isRedRightPng = true;
 	public static boolean isRedLeftPng = false;
-	public static float redWidthPng = 45;
-	public static float redHeightPng = 54;
+	public static float redWidthPng = 40;
+	public static float redHeightPng = 35;
 
 
 	public static SpriteBatch batchRedFri;
@@ -210,8 +210,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 	public static Texture pinkMonsterRight,pinkMonsterLeft;
 	public static boolean isPinkRightPng = true;
 	public static boolean isPinkLeftPng = false;
-	public static float pinkWidthPng = 45;
-	public static float pinkHeightPng = 54;
+	public static float pinkWidthPng = 40;
+	public static float pinkHeightPng = 35;
 
 
 	public static SpriteBatch batchPinkFri;
@@ -233,8 +233,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 	public static Texture cyanMonsterRight,cyanMonsterLeft;
 	public static boolean isCyanRightPng = true;
 	public static boolean isCyanLeftPng = false;
-	public static float cyanWidthPng = 45;
-	public static float cyanHeightPng = 54;
+	public static float cyanWidthPng = 40;
+	public static float cyanHeightPng = 35;
 
 
 	public static SpriteBatch batchCyanFri;
@@ -256,8 +256,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 	public static Texture orangeMonsterRight,orangeMonsterLeft;
 	public static boolean isOrangeRightPng = true;
 	public static boolean isOrangeLeftPng = false;
-	public static float orangeWidthPng = 45;
-	public static float orangeHeightPng = 54;
+	public static float orangeWidthPng = 40;
+	public static float orangeHeightPng = 35;
 
 
 	public static SpriteBatch batchOrangeFri;
@@ -320,8 +320,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 	public static Texture playerMonsterRight,playerMonsterLeft;
 	public static boolean isPlayerRightPng = true;
 	public static boolean isPlayerLeftPng = false;
-	public static float playerWidthPng = 40;
-	public static float playerHeightPng = 35;
+	public static float playerWidthPng = 30;
+	public static float playerHeightPng = 26;
 
 
 
@@ -487,8 +487,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 
 		batchPlayer = new SpriteBatch();
-		playerMonsterRight = new Texture("player/playerRight4.png");
-		playerMonsterLeft = new Texture("player/playerLeft4.png");
+		playerMonsterRight = new Texture("player/pacRight.png");
+		playerMonsterLeft = new Texture("player/pacLeft.png");
 
 
        music = Gdx.audio.newMusic(Gdx.files.internal("music/music.ogg"));
