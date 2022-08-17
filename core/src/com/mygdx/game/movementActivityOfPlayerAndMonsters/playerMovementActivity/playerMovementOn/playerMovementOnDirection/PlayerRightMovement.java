@@ -7,6 +7,17 @@ public class PlayerRightMovement extends TheLastLife {
     public PlayerRightMovement()
     {
 
+        if(arcX%cellWidth==0 && arcY%cellHeight==0)
+        {
+
+
+            isPlayerLeftPng = false;
+            isPlayerDownPng = false;
+            isPlayerUpPng = false;
+            isPlayerRightPng = true;
+
+
+        }
         boolean On = false;
         if(arcY%cellHeight==0 && arcY/cellHeight==17 && arcX/cellWidth>=27)
         {

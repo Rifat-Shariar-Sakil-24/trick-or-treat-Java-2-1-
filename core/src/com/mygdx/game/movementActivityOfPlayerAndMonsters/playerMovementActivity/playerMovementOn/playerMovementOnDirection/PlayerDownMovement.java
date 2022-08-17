@@ -5,6 +5,15 @@ import com.mygdx.game.drawing.player.PlayerDraw;
 
 public class PlayerDownMovement extends TheLastLife {
     public PlayerDownMovement(){
+
+        if(arcX%cellWidth==0 && arcY%cellHeight==0) {
+
+                isPlayerLeftPng = false;
+                isPlayerDownPng = true;
+                isPlayerUpPng = false;
+                isPlayerRightPng = false;
+
+        }
         arcY = Math.max(arcY,arcYMin);
         boolean valid = true;
         if(arcY%cellHeight==0 && arcX%cellWidth==0)
@@ -48,6 +57,7 @@ public class PlayerDownMovement extends TheLastLife {
                 timeDurationOfGhostFrightenedModeOrangeMonster = 0;
 
                 score += perCoinScore;
+
 
 
             }

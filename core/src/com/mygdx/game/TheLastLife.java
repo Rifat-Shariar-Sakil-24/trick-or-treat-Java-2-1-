@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.mygdx.game.coins.drawCoins.drawingCoinsOnMaze;
 import com.mygdx.game.coins.pointsOnMazeForCoins.FrightenedModeCoinPoints;
 import com.mygdx.game.coins.pointsOnMazeForCoins.LegalButNoCoinPoints;
@@ -23,6 +24,7 @@ import jdk.javadoc.internal.tool.Start;
 
 import javax.swing.plaf.TextUI;
 import java.awt.*;
+import java.awt.image.BaseMultiResolutionImage;
 import java.util.Set;
 
 public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
@@ -160,7 +162,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 
 	public static float cyanGhostRadius = 9;
-	public static float cyanGhostMove= arcMove;
+	public static float cyanGhostMove = arcMove;
 	public static boolean cyanGhostMovementOn = false;
 	public static boolean cyanRight=false,cyanLeft=false,cyanUp=false,cyanDown=false;
 
@@ -317,9 +319,14 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 
 	public static SpriteBatch batchPlayer;
-	public static Texture playerMonsterRight,playerMonsterLeft;
+	public static Texture playerMonsterRight,playerMonsterLeft,playerMonsterUp,playerMonsterDown;
 	public static boolean isPlayerRightPng = true;
 	public static boolean isPlayerLeftPng = false;
+
+	public static boolean isPlayerUpPng = false;
+	public static boolean isPlayerDownPng = false;
+
+
 	public static float playerWidthPng = 30;
 	public static float playerHeightPng = 26;
 
@@ -347,7 +354,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 	public  static long totalLife = 3;
 
-	public static long musicOn = 0;
+	public static long musicOn = 1;
 
 	public static long numberOfCoins = 246;
 
@@ -421,12 +428,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 
 
-
-
 	@Override
 	public void create () {
-
-
 
 		batch = new SpriteBatch();
 		img = new Texture("fullScreen2.jpg");
@@ -489,9 +492,12 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 		batchPlayer = new SpriteBatch();
 		playerMonsterRight = new Texture("player/pacRight.png");
 		playerMonsterLeft = new Texture("player/pacLeft.png");
+		playerMonsterUp = new Texture("player/pacUP.png");
+		playerMonsterDown = new Texture("player/pacDown.png");
 
 
-       music = Gdx.audio.newMusic(Gdx.files.internal("music/music.ogg"));
+
+		music = Gdx.audio.newMusic(Gdx.files.internal("music/music.ogg"));
 	   music.setLooping(true);
 	   music.setVolume(0.9f);
 
@@ -522,6 +528,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 		yourScoreImg = new Texture("lifeended.jpg");
 		allCoinsEaten = new Texture("allCoinsEaten.jpg");
 
+		//for score writing
 		menu = new SpriteBatch();
 		font = new BitmapFont();
 		font.setColor(Color.RED);
@@ -552,6 +559,8 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 		exitRestartOnGameScreenImage[1] = new Texture("restart.png");
 
 
+	//	Image image = new com.badlogic.gdx.scenes.scene2d.ui.Image("exit.png");
+
 
 
 
@@ -560,11 +569,11 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 	@Override
 	public void render () {
 
-		Gdx.input.setInputProcessor((InputProcessor) this);
+		Gdx.input.setInputProcessor((InputProcessor) this);//clears screen
         startingScreenBatch.begin();
 		startingScreenBatch.draw(startingScreenImg,0,0);
 		startingScreenBatch.end();
-		timeElapsed += Gdx.graphics.getDeltaTime();
+		timeElapsed += Gdx.graphics.getDeltaTime();//time with perspective of screen frame
 
 		//if(amiOn==2 && musicOn==1)
 		//	music.play();
@@ -600,7 +609,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 
 	@Override
-	public void dispose () {
+	public void dispose () {//shows the objects drew
 		batch.dispose();
 		img.dispose();
 		shapeRenderer.dispose();
@@ -613,8 +622,13 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 	@Override
 	public boolean keyDown(int keycode) {
-		if(menuStart == 0) menuStart=1;
-		else menuStart = 0;
+		//System.out.println(Keys.va);
+
+			   if(menuStart==0) menuStart = 1;
+			   else menuStart = 0;
+
+
+
 		return false;
 	}
 
@@ -626,7 +640,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 	@Override
 	public boolean keyTyped(char character) {
-		//System.out.println("hello");
+
 		if(amiOn==1)
 		{
 			//if(character == 'e') { System.exit(0); }
@@ -642,15 +656,12 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 			if (playerMovementOn) {
 				PlayerDirectionCommandStore pacdisto = new PlayerDirectionCommandStore(character);
 			}
-			if(character=='p') {
-				if(musicOn==0) musicOn =1;
-				else musicOn = 0;
-			}
-			else if(character == 'e') System.exit(0);
-			else if(character == 'r'){
+
+
+			else if(character == 'i'){
 				SetAllVariablesRestart setAllVariablesRestart = new SetAllVariablesRestart();
 			}
-			else if(character == 'o'){
+			else if(character == 'o'){ // music image toggle
 				if(musicOn ==1) musicOn = 0;
 				else musicOn = 1;
 			}

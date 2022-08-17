@@ -6,6 +6,18 @@ import com.mygdx.game.drawing.player.PlayerDraw;
 public class PlayerLeftMovement extends TheLastLife {
     public PlayerLeftMovement(){
 
+        if(arcX%cellWidth==0 && arcY%cellHeight==0)
+        {
+
+
+                isPlayerLeftPng = true;
+                isPlayerDownPng = false;
+                isPlayerUpPng = false;
+                isPlayerRightPng = false;
+
+
+        }
+
         boolean On = false;
 
         if(arcY%cellHeight==0 && arcY/cellHeight==17 && arcX/cellWidth>=27)
@@ -60,7 +72,7 @@ public class PlayerLeftMovement extends TheLastLife {
         {
             arcX = Math.max(arcX,arcXMin);
             boolean valid = true;
-            if(arcY%cellHeight==0 && arcX%cellWidth==00)
+            if(arcY%cellHeight==0 && arcX%cellWidth==0)
             {
                 int x = (int) (arcX/cellWidth);
                 int y = (int) (arcY/cellHeight);

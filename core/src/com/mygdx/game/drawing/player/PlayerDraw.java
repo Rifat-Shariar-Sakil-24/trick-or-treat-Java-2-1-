@@ -9,10 +9,21 @@ public class PlayerDraw extends TheLastLife {
             batchPlayer.draw(playerMonsterRight,arcX-(playerWidthPng/2),arcY-(playerHeightPng/2));
             batchPlayer.end();
         }
-        else {
+        else if(isPlayerLeftPng==true) {
             batchPlayer.begin();
             batchPlayer.draw(playerMonsterLeft,arcX-(playerWidthPng/2),arcY-(playerHeightPng/2));
             batchPlayer.end();
         }
+        else if(isPlayerDownPng==true){
+            batchPlayer.begin();
+            batchPlayer.draw(playerMonsterDown,arcX-(playerWidthPng/2),arcY-(playerHeightPng/2));
+            batchPlayer.end();
+        }
+        else{
+            batchPlayer.begin();
+            batchPlayer.draw(playerMonsterUp,arcX-(playerWidthPng/2),arcY-(playerHeightPng/2));
+            batchPlayer.end();
+        }
+
     }
 }

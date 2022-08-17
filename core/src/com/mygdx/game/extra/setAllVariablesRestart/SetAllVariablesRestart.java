@@ -217,8 +217,10 @@ public class SetAllVariablesRestart extends TheLastLife {
              numberOfCoins = 246;
             menuStart = 1;
         }
-        isPlayerLeftPng = false;
         isPlayerRightPng = true;
+        isPlayerUpPng =false;
+        isPlayerDownPng =false;
+        isPlayerLeftPng = false;
 
 
     }

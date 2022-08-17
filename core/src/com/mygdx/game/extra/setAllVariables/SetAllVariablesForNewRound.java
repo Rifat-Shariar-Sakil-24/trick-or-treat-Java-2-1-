@@ -221,7 +221,10 @@ public class SetAllVariablesForNewRound extends TheLastLife {
             menuStart = 1;
         }
         isPlayerRightPng = true;
+        isPlayerUpPng =false;
+        isPlayerDownPng =false;
         isPlayerLeftPng = false;
+
 
 
 

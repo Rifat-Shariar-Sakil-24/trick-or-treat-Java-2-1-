@@ -5,6 +5,20 @@ import com.mygdx.game.drawing.player.PlayerDraw;
 
 public class PlayerUpMovement extends TheLastLife {
     public PlayerUpMovement(){
+
+
+        if(arcX%cellWidth==0 && arcY%cellHeight==0)
+        {
+
+
+            isPlayerLeftPng = false;
+            isPlayerDownPng = false;
+            isPlayerUpPng = true;
+            isPlayerRightPng = false;
+
+
+        }
+
         arcY = Math.min(arcY,arcYMax);
 
         boolean valid = true;

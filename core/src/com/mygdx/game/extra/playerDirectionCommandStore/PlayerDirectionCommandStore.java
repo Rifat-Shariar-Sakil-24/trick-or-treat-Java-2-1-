@@ -8,8 +8,8 @@ public class PlayerDirectionCommandStore extends TheLastLife {
     {
         if(character==' ')arcMovementOn=true;
         if(character=='d'){
-            isPlayerLeftPng =false;
-            isPlayerRightPng = true;
+
+
             if(arcUp || arcDown) {arcDirection = 'd';}
             else
             {
@@ -19,8 +19,7 @@ public class PlayerDirectionCommandStore extends TheLastLife {
             }
         }
         if(character == 'a'){
-            isPlayerRightPng = false;
-            isPlayerLeftPng = true;
+
             if(arcUp || arcDown) arcDirection = 'a';
             else
             {
@@ -30,6 +29,7 @@ public class PlayerDirectionCommandStore extends TheLastLife {
             }
         }
         if(character=='w'){
+
             if(arcRight || arcLeft) arcDirection = 'w';
             else
             {
@@ -40,6 +40,7 @@ public class PlayerDirectionCommandStore extends TheLastLife {
 
         }
         if(character=='s'){
+
             if(arcRight || arcLeft)arcDirection = 's';
             else
             {

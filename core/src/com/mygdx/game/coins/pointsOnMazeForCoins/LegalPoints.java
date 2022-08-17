@@ -16,15 +16,19 @@ public class LegalPoints {
         for(int i=0;i<xAxis.size();i++) allLegalPoints[xAxis.get(i)][y]=1;
         xAxis.clear();
 
+
         y=3;
         xAxis = new ArrayList<>(Arrays. asList(2,13,16,27));
         for(int i=0;i<xAxis.size();i++) allLegalPoints[xAxis.get(i)][y]=1;
         xAxis.clear();
 
+
+
         y=4;
         xAxis = new ArrayList<>(Arrays. asList(2,13,16,27));
         for(int i=0;i<xAxis.size();i++) allLegalPoints[xAxis.get(i)][y]=1;
         xAxis.clear();
+
 
 
         y=5;

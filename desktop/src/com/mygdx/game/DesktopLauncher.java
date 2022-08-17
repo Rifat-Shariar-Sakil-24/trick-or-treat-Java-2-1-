@@ -11,7 +11,7 @@ public class DesktopLauncher {
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
 		config.setForegroundFPS(60);
 		config.setWindowedMode(1400,960);
-		config.setTitle("The Last Life");
+		config.setTitle("trick or treat?");
 	//	new Lwjgl3Application(new StartingScreen(),config);
 		new Lwjgl3Application(new TheLastLife(), config);
 
