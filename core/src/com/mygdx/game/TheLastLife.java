@@ -521,9 +521,9 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
        // staring screen
 		startingScreenBatch = new SpriteBatch();
-		startingScreenImg = new Texture("startScreenMain7.jpg");
-		menuImg = new Texture("menu2.jpg");
-		menuImg2 = new Texture("menu3.jpg");
+		startingScreenImg = new Texture("startScreenMain8.jpg");
+		menuImg = new Texture("menu4.jpg");
+		menuImg2 = new Texture("menu5.jpg");
 		sideImg = new Texture("bar.png");
 		yourScoreImg = new Texture("lifeended.jpg");
 		allCoinsEaten = new Texture("allCoinsEaten.jpg");
