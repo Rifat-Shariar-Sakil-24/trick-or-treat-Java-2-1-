@@ -333,7 +333,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 
 
-	Music music;
+	Music music,musicGamePlayScreen;
 	public static Texture texture,textureBig;
     public static Sprite sprite,spriteBig;
 
@@ -355,6 +355,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 	public  static long totalLife = 3;
 
 	public static long musicOn = 1;
+	public static long musicGameScreen = 1;
 
 	public static long numberOfCoins = 246;
 
@@ -497,8 +498,12 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 
 
 
-		music = Gdx.audio.newMusic(Gdx.files.internal("music/music.ogg"));
+		music = Gdx.audio.newMusic(Gdx.files.internal("music/gameScreen.ogg"));
 	   music.setLooping(true);
+	   music.setVolume(0.9f);
+
+	   musicGamePlayScreen = Gdx.audio.newMusic((Gdx.files.internal("music/music.ogg")));
+	   musicGamePlayScreen.setLooping(true);
 	   music.setVolume(0.9f);
 
 
@@ -524,9 +529,9 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 		startingScreenImg = new Texture("startScreenMain8.jpg");
 		menuImg = new Texture("menu4.jpg");
 		menuImg2 = new Texture("menu5.jpg");
-		sideImg = new Texture("bar.png");
-		yourScoreImg = new Texture("lifeended.jpg");
-		allCoinsEaten = new Texture("allCoinsEaten.jpg");
+		sideImg = new Texture("bar2.jpg");
+		yourScoreImg = new Texture("lifeended2.jpg");
+		allCoinsEaten = new Texture("allCoinsEaten2.jpg");
 
 		//for score writing
 		menu = new SpriteBatch();
@@ -574,9 +579,16 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 		startingScreenBatch.draw(startingScreenImg,0,0);
 		startingScreenBatch.end();
 		timeElapsed += Gdx.graphics.getDeltaTime();//time with perspective of screen frame
+		if(amiOn==2){music.pause();
+			if(musicGameScreen==1)musicGamePlayScreen.play();
+			else musicGamePlayScreen.pause();
+		}
+		else {
+			music.play();
+			musicGamePlayScreen.stop();
+		}
 
-		//if(amiOn==2 && musicOn==1)
-		//	music.play();
+
 		//else if(amiOn ==2 && musicOn==0) music.pause();
 
 		if(timeElapsed>=3f) {
@@ -662,27 +674,30 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 				SetAllVariablesRestart setAllVariablesRestart = new SetAllVariablesRestart();
 			}
 			else if(character == 'o'){ // music image toggle
-				if(musicOn ==1) musicOn = 0;
-				else musicOn = 1;
+				if(musicGameScreen ==1) musicGameScreen = 0;
+				else musicGameScreen = 1;
 			}
 		}
 		else if(amiOn==3)
 		{
-			if(character == 'r'){
+			if(character == 'i'){
 				amiOn = 2;
 				musicOn = 1;
+
 				score = 0;
 				SetAllVariablesRestart setAllVariablesRestart = new SetAllVariablesRestart();
+				musicGameScreen = 1;
 			}
-			else if(character == 'e')System.exit(0);
+
 		}
 
 		else if(amiOn==4){
-			if(character=='r'){
+			if(character=='i'){
 				amiOn = 2;
 				score  = 0;
 				musicOn = 1;
 				SetAllVariablesRestart setAllVariablesRestart = new SetAllVariablesRestart();
+				musicGameScreen = 1;
 
 			}
 			else if(character=='e')System.exit(0);

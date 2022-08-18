@@ -29,7 +29,7 @@ public class YourScore extends TheLastLife {
             digitStartX += scoreDigitSizeZeroLife;
 
         }
-        int drawStartX= (int) exitRestartOnGameScreenImageXZeroLife;
+        /*int drawStartX= (int) exitRestartOnGameScreenImageXZeroLife;
 
         for(int i=0;i<2;i++)
         {
@@ -40,7 +40,7 @@ public class YourScore extends TheLastLife {
             drawStartX += exitRestartOnGameScreenImageSpaceZeroLife;
             drawStartX += exitRestartOnGameScreenImageSizeZeroLife;
 
-        }
+        }*/
 
 
     }

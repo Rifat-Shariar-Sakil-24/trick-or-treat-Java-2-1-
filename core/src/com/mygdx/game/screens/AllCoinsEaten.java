@@ -30,7 +30,7 @@ public class AllCoinsEaten extends TheLastLife {
             digitStartX += scoreDigitSizeCoinsEaten;
 
         }
-        int drawStartX= (int) exitRestartOnGameScreenImageXCoinsEaten;
+        /*int drawStartX= (int) exitRestartOnGameScreenImageXCoinsEaten;
 
         for(int i=0;i<2;i++)
         {
@@ -41,7 +41,7 @@ public class AllCoinsEaten extends TheLastLife {
             drawStartX += exitRestartOnGameScreenImageSpaceCoinsEaten;
             drawStartX += exitRestartOnGameScreenImageSizeCoinsEaten;
 
-        }
+        }*/
 
 
 

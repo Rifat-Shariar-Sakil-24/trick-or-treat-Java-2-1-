@@ -220,6 +220,7 @@ public class SetAllVariablesForNewRound extends TheLastLife {
             numberOfCoins = 246;
             menuStart = 1;
         }
+
         isPlayerRightPng = true;
         isPlayerUpPng =false;
         isPlayerDownPng =false;

@@ -6,7 +6,7 @@ public class MusicOnOff extends TheLastLife {
     public MusicOnOff()
     {
         batch.begin();
-        if(musicOn==1) {
+        if(musicGameScreen==1) {
             batch.draw(musicOnOffImage[0], musicOnOffImageX, musicOnOffImageY);
         }
         else {

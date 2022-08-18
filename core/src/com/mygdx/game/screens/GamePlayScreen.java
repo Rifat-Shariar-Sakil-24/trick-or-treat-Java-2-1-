@@ -70,7 +70,7 @@ public class GamePlayScreen extends TheLastLife {
         Score score1 = new Score();
         Life life1 = new Life();
         MusicOnOff musicOnOff = new MusicOnOff();
-        ExitRestart exitRestart = new ExitRestart();
+       // ExitRestart exitRestart = new ExitRestart();
 
         /*batch.begin();
         font.draw(batch,"SCORE",1150,900);
