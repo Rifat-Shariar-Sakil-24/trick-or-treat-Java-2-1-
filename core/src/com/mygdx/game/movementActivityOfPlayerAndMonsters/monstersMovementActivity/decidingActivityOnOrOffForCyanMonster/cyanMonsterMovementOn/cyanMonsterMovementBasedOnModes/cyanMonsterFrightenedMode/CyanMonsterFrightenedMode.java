@@ -71,8 +71,11 @@ public class CyanMonsterFrightenedMode extends TheLastLife {
 
 
             // long ind = (long) (Math.random(1) % totalDirection);
+//            Random rand = new Random();
+//            long ind = rand.nextLong(totalDirection);
             Random rand = new Random();
-            long ind = rand.nextLong(totalDirection);
+            long ind = Math.abs(rand.nextLong()) % totalDirection;
+
 
             long directionFinal = Direction.get((int) ind);
 
