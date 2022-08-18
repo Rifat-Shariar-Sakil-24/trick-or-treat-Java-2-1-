@@ -9,7 +9,7 @@ import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivi
 public class DecidingActivityOnOrOffForPinkMonster extends TheLastLife {
     public DecidingActivityOnOrOffForPinkMonster()
     {
-        if(timeElapsedForPauseToMovementPinkMonster<=5){
+        if(timeElapsedForPauseToMovementPinkMonster<=2){
             PinkMonsterMovementOff pinkMonsterMovementOff = new PinkMonsterMovementOff();
         }
         else{

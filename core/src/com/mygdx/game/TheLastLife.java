@@ -670,10 +670,10 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 			}
 
 
-			else if(character == 'i'){
+			 if(character == 'i'){
 				SetAllVariablesRestart setAllVariablesRestart = new SetAllVariablesRestart();
 			}
-			else if(character == 'o'){ // music image toggle
+			 if(character == 'o'){ // music image toggle
 				if(musicGameScreen ==1) musicGameScreen = 0;
 				else musicGameScreen = 1;
 			}
@@ -700,7 +700,7 @@ public class TheLastLife extends ApplicationAdapter implements InputProcessor  {
 				musicGameScreen = 1;
 
 			}
-			else if(character=='e')System.exit(0);
+
 		}
 
 		return false;

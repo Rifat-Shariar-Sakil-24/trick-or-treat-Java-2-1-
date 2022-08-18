@@ -9,7 +9,7 @@ import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivi
 public class DecidingActivityOnOrOffForOrangeMonster extends TheLastLife {
     public DecidingActivityOnOrOffForOrangeMonster()
     {
-        if(timeElapsedForPauseToMovementOrangeMonster<=8){
+        if(timeElapsedForPauseToMovementOrangeMonster<=4){
             OrangeMonsterMovementOff orangeMonsterMovementOff = new OrangeMonsterMovementOff();
         }
         else{

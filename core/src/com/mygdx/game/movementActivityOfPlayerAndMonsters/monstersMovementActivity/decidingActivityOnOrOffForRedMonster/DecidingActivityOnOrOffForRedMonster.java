@@ -7,7 +7,7 @@ import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivi
 public class DecidingActivityOnOrOffForRedMonster extends TheLastLife {
     public DecidingActivityOnOrOffForRedMonster()
     {
-        if(timeElapsedForPauseToMovementRedMonster<=5){
+        if(timeElapsedForPauseToMovementRedMonster<=2){
             RedMonsterMovementOff redMonsterMovementOff = new RedMonsterMovementOff();
         }
         else{

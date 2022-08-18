@@ -7,7 +7,7 @@ import com.mygdx.game.movementActivityOfPlayerAndMonsters.monstersMovementActivi
 public class DecidingActivityOnOrOffForCyanMonster extends TheLastLife {
     public DecidingActivityOnOrOffForCyanMonster()
     {
-        if(timeElapsedForPauseToMovementCyanMonster<=8){
+        if(timeElapsedForPauseToMovementCyanMonster<=4){
             CyanMonsterMovementOff cyanMonsterMovementOff = new CyanMonsterMovementOff();
         }
         else{
